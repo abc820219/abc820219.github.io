@@ -1,0 +1,36 @@
+@import 'reset';
+@import 'utils';
+@import 'transition';
+@import 'common';
+html {
+    font-family: 'Microsoft JhengHei', 'Roboto', sans-serif;
+}
+* {
+    box-sizing: border-box;
+    user-select: none;
+    letter-spacing: 1px;
+}
+/*-------滾動條整體樣式----*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/*滾動條裡面小方塊樣式*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: lighten($primary, 15%);
+}
+
+/*滾動條裡面軌道樣式*/
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px rgba($primary, 0.2);
+
+    border-radius: 0;
+
+    background: rgba($primary, 0.1);
+}
