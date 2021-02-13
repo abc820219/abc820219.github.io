@@ -1297,7 +1297,7 @@
                 <h2>基本資訊</h2>
                 <ul>
                     <li>最高學歷 : 醒吾科技大學</li>
-                    <li>工作總年資 : 2年 [ 網頁設計,平面設計,助理工程師 ]</li>
+                    <li>工作總年資 : 2年 [ 網頁,平面,助理工程師 ]</li>
                     <li>工作狀態 : 在職中</li>
                     <li>年齡 : 27</li>
                     <li>興趣 : 桌遊 [ 對戰類, 博弈類 ] , 日文 , 音樂</li>
@@ -1469,7 +1469,7 @@
                             </button-component>
                         </div>
                         <div class="w-100 disign-idea">
-                          建議使用電腦版來觀看此作品，因為買不起2077只好自己仿造一個介面來過過癮，網站的評分機制均是個人主觀標準，如果您認同我的作品或是對於小弟個人我有興趣，麻煩請您與我聯絡做進一步的互相認識，希望未來能夠為貴公司盡一份心力並且互相成長，謝謝您的耐心。
+                            建議使用電腦版來觀看此作品，因為買不起2077只好自己仿造一個介面來過過癮，網站的評分機制均是個人主觀標準，如果您認同我的作品或是對於小弟我有興趣，麻煩請您與我聯絡，進一步的互相認識，希望未來能夠為貴公司盡一份心力，謝謝您的耐心。
                         </div>
                     </div>
                 </div>
@@ -1522,12 +1522,23 @@ export default {
 @import '@/assets/scss/_utils';
 .info {
     @include light-primary();
+    @include com-width {
+        .info-main {
+            display: block;
+        }
+    }
     #svgP {
         @include psa(initial, initial, 0, initial);
+        @include com-width {
+            display: none;
+        }
     }
     h2 {
         text-align: center;
         @include font(20px, 36px);
+        @include com-width {
+            @include font(18px);
+        }
         border-bottom: 1px solid $primary;
     }
     .info-box {
@@ -1551,6 +1562,12 @@ export default {
         li {
             @include font(16px, 30px);
             text-indent: 2em;
+            @include com-width {
+                @include font(14px, 24px);
+            }
+        }
+        @include com-width {
+            width: 100%;
         }
     }
     .info-content {
@@ -1560,6 +1577,11 @@ export default {
         margin-left: 10px;
         background-color: rgba($primary, 0.5);
         border: 1px solid $primary;
+        @include com-width {
+            margin-top: 10px;
+            margin-left: 0px;
+            min-height: 580px;
+        }
     }
     .info-option {
         width: 100%;
@@ -1567,8 +1589,19 @@ export default {
             width: 50%;
             border-left: 1px solid $primary;
         }
+        @include com-width {
+            h2:first-child {
+                display: none;
+            }
+            h2 {
+                width: 100%;
+            }
+        }
         .info-option-wrap {
             width: 50%;
+            @include com-width {
+                display: none;
+            }
         }
     }
     .button-component {
@@ -1600,6 +1633,9 @@ export default {
         padding-left: 10px;
         padding-top: 10px;
         text-indent: 2em;
+        @include com-width {
+        @include font(16px, 24px);
+    }
     }
 }
 </style>

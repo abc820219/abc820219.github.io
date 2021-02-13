@@ -61,6 +61,9 @@ export default {
     position: fixed;
     left: 30px;
     bottom: 30px;
+    @include pad-width {
+        bottom: 60px;
+    }
 }
 .timer-component > span {
     padding: 10px 20px;

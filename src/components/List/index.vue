@@ -71,5 +71,14 @@ export default {
     .sub-text {
         font-size: 12px;
     }
+    @include pad-width {
+        min-height: 0;
+        margin-bottom: 10px;
+        padding: 0px;
+       
+        .button-component {
+            width: 300px !important;
+        }
+    }
 }
 </style>

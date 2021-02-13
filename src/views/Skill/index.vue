@@ -32,16 +32,18 @@
             <div class="detail">
                 <h2>{{ detailData.skillName }}</h2>
                 <p class="lv">-lv {{ detailData.skillValue }}</p>
-                <p class="des">{{ detailData.skillDes }}</p>
-                <ul class="list">
-                    <li v-show="currentIndex !== 0">基本掌握</li>
-                    <li
-                        v-for="(list, index) in detailData.skillList"
-                        :key="index"
-                    >
-                        - {{ list }}
-                    </li>
-                </ul>
+                <div class="list-wrap">
+                    <p class="des">{{ detailData.skillDes }}</p>
+                    <ul class="list">
+                        <li v-show="currentIndex !== 0">基本掌握</li>
+                        <li
+                            v-for="(list, index) in detailData.skillList"
+                            :key="index"
+                        >
+                            - {{ list }}
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -175,7 +177,7 @@ export default {
                         skillName: 'Others',
                         skillValue: 5,
                         skillDes: '一些其他技能。',
-                        skillList: ['Potoshop', 'Illustrator','日文'],
+                        skillList: ['Potoshop', 'Illustrator', '日文'],
                     },
                 ]
             },
@@ -225,6 +227,10 @@ export default {
     .skill-detail {
         width: 400px;
         @include psa(50%, -360px, initial, initial);
+        @include pad-width {
+            width: 360px;
+            @include psa(50%, -320px, initial, initial);
+        }
         z-index: 3;
         transform: translateY(-50%);
         min-height: calc(70vh - 70px);
@@ -262,6 +268,22 @@ export default {
                 line-height: 1.5;
                 text-shadow: 0 0 5px $font-color-blue, 0 0 8px $font-color-blue;
             }
+            @include pad-width {
+                h2,
+                .lv {
+                    font-size: 16px;
+                }
+                .des,
+                .list {
+                    font-size: 14px;
+                    text-shadow: 0 0 0px $font-color-blue,
+                        0 0 0px $font-color-blue;
+                }
+                .list-wrap {
+                    max-height: 43vh;
+                    overflow-y:auto;
+                }
+            }
         }
         &.active {
             @include psa(50%, 0px, initial, initial);
@@ -291,6 +313,10 @@ export default {
     background-color: rgba($primary, 0.5);
     width: 150px;
     height: 150px;
+    @include pad-width {
+        width: 120px;
+        height: 120px;
+    }
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     cursor: pointer;
     &:hover {
@@ -309,11 +335,18 @@ export default {
     .clip-box:nth-child(4) ~ .clip-box {
         margin-top: 100px;
     }
+    @include pad-width {
+        width: 320px;
+    }
 }
 .clip-box {
     position: relative;
     width: 100px;
     height: 100px;
+    @include pad-width {
+        width: 80px;
+        height: 80px;
+    }
     clip-path: polygon(
         30% 0%,
         70% 0%,
@@ -344,6 +377,13 @@ export default {
         p {
             font-size: 10px;
             line-height: 10px;
+        }
+        @include pad-width {
+            font-size: 12px;
+            line-height: 48px;
+            p {
+                font-size: 8px;
+            }
         }
     }
     &:after {

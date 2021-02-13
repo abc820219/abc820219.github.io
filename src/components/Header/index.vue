@@ -36,12 +36,18 @@ export default {
     box-shadow: 0px 1px 0px 0px lighten($primary, 15%);
     @include font(26px);
     padding-right: 1em;
+    @include pad-width {
+        justify-content: center;
+    }
     h2 {
         color: $font-color-blue;
         text-shadow: 0 0 5px $font-color-blue, 0 0 8px $font-color-blue;
         text-indent: 1em;
         span {
             font-size: 16px;
+        }
+        @include com-width {
+            font-size: 20px;
         }
     }
     .money {
@@ -55,6 +61,9 @@ export default {
             text-shadow: none;
             margin-right: 0.5em;
             vertical-align: text-bottom;
+        }
+        @include com-width {
+            display: none;
         }
     }
 }

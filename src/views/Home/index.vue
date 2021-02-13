@@ -72,8 +72,12 @@ export default {
 }
 </script>
 <style scoped lang="scss">
+@import '@/assets/scss/_utils';
 .main {
     min-height: 30vh;
     max-width: 1024px;
+    @include pad-width {
+        flex-direction: column;
+    }
 }
 </style>

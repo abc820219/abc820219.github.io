@@ -110,6 +110,9 @@ export default {
     > ul li {
         color: lighten($primary, 15%);
         cursor: pointer;
+        @include pad-width {
+           color: lighten($primary, 30%);
+        }
     }
     > ul li.active {
         color: $font-color-blue;
@@ -140,6 +143,23 @@ export default {
         width: 35px;
         text-align: center;
         clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 14% 49%, 0% 0%);
+    }
+    @include com-width {
+        right: 30px;
+        left: initial;
+        transform: none;
+        width: 600px;
+    }
+    @include pad-width {
+        background-color: rgba($primary, 0.9);
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        width: initial;
+        font-size: 18px;
+        @include font(18px,36px)
     }
 }
 </style>

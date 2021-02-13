@@ -40,3 +40,20 @@ $baseLine: 10px;
     color: lighten($color, 40%);
     text-shadow: 0 0 3px lighten($color, 20%), 0 0 8px lighten($color, 30%);
 }
+
+
+$pad-media: 1024px;
+$com-media: 1600px;
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
+//平板
+@mixin pad-width() {
+    @media  (max-width: $pad-media) {
+        @content;
+    }
+}
+@mixin com-width() {
+    @media  (max-width: $com-media) {
+        @content;
+    }
+}

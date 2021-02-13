@@ -68,5 +68,18 @@ export default {
     .sub-text {
         font-size: 12px;
     }
+    @include pad-width {
+        min-height: 0;
+        display: flex;
+        margin-bottom: 10px;
+        padding: 0px;
+        > li + li {
+            margin-top: 0px;
+            margin-left: 10px;
+        }
+        .button-component {
+            width: 170px !important;
+        }
+    }
 }
 </style>

@@ -49,7 +49,7 @@ export default {
                         },
                         {
                             id: 3,
-                            title: '活動預約報到系統',
+                            title: '預約報到系統',
                             content: '處理B2C的操作使用介面。',
                             imgs: [],
                         },
@@ -68,21 +68,21 @@ export default {
                     list: [
                         {
                             id: 0,
-                            title: '賽德龐克個人網站',
+                            title: '賽德龐克網站',
                             content:
                                 '以遊戲2077為設計發想，並且用vue框架開發各種組件，使用到各式排版技巧與簡單特效，用scss來加速開發速度，同時也兼容手機畫面。',
                             imgs: [],
                         },
                         {
                             id: 1,
-                            title: '工作室個人網站',
+                            title: '工作室網站',
                             content:
                                 '夢想有一間工作室當作設計發想，使用vue框架開發，並且有撰寫後台。',
                             imgs: [],
                         },
                         {
                             id: 2,
-                            title: 'landingPage個人網站',
+                            title: 'landingPage',
                             content:
                                 '使用大量jquery製作大量特效的一頁式個人介紹網站。',
                             imgs: [],
@@ -123,6 +123,15 @@ export default {
     }
     .listContent-component {
         padding-left: 60px;
+        @include pad-width {
+            padding-left: 0px;
+        }
+    }
+    @include pad-width {
+        > div {
+            padding-top: 30px;
+            flex-direction: column;
+        }
     }
 }
 </style>

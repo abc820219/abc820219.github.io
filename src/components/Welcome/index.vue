@@ -78,5 +78,8 @@ export default {
     text-indent: 1em;
     line-height: 30vh;
     text-align: center;
+    @include pad-width {
+        font-size: 26px;
+    }
 }
 </style>

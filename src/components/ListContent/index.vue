@@ -41,5 +41,13 @@ export default {
     .content {
         @include font(20px);
     }
+    @include pad-width{
+        h2{
+            font-size: 20px;
+        }
+        .content{
+            font-size: 16px;
+        }
+    }
 }
 </style>
