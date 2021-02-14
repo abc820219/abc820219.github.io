@@ -3,15 +3,16 @@
         <span>
             {{ content }}
         </span>
-        <button-component>
+        <button-component class="weather">
             <template v-slot:text>
-                <h1>台北 : 晴天多雲</h1>
+                <h1>台北 : {{ weather }}</h1>
             </template>
         </button-component>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
 import Button from '@/components/Button'
 export default {
     name: 'timer-component',
@@ -22,6 +23,7 @@ export default {
         return {
             timer: null,
             content: '',
+            weather: null,
         }
     },
     mounted() {
@@ -30,6 +32,17 @@ export default {
         this.timer = setInterval(() => {
             _this.nowTimeHandler()
         }, 1000)
+        axios
+            .get(
+                'https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-E0868EAC-4F39-4666-98D5-35722CDE9F24&limit=1&offset=0&format=JSON&locationName=%E8%87%BA%E5%8C%97%E5%B8%82&elementName=Wx'
+            )
+            .then((res) => {
+                this.weather =
+                    res.data.records.location[0].weatherElement[0].time[0].parameter.parameterName
+            })
+            .catch((err) => {
+                console.log(err)
+            })
     },
     methods: {
         nowTimeHandler() {
@@ -73,5 +86,10 @@ export default {
     color: lighten($font-color-blue, 15%);
     letter-spacing: 3px;
     @include font(20px);
+}
+.weather {
+    @include pad-width {
+        display: none;
+    }
 }
 </style>

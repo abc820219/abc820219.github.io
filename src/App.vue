@@ -4,17 +4,16 @@
         <transition name="fade" mode="out-in">
             <router-view />
         </transition>
+        <contact-component></contact-component>
     </div>
 </template>
 <script>
 import Header from '@/components/Header'
+import Contact from '@/components/Contact'
 export default {
     components: {
         'header-component': Header,
-    },
-    mounted() {
-        const BODY = document.querySelector('body')
-        BODY.classList.add('dark')
+        'contact-component': Contact
     },
 }
 </script>
@@ -29,7 +28,7 @@ export default {
     position: relative;
     overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding: 10px;
 }
 #app::after {

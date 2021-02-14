@@ -1,0 +1,6 @@
+@import '@/assets/scss/_utils.scss';
+.dark {
+  ::-webkit-scrollbar-track {
+      background: rgba($primary, 0.1);
+  }
+}

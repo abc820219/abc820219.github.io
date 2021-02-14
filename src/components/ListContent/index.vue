@@ -4,16 +4,16 @@
         <p class="content">
             {{ currentListData.content }}
         </p>
-        <div
-            class="imgBox"
-            v-if="currentListData.imgs && currentListData.imgs.length"
-        >
-            <img :src="currentListData.imgs[0]" alt="" />
+        <div class="imgBox">
+            <carousell-component
+                :imgs="currentListData.imgs"
+            ></carousell-component>
         </div>
     </div>
 </template>
 
 <script>
+import Carousell from '@/components/Carousell'
 export default {
     props: {
         currentListData: {
@@ -24,6 +24,10 @@ export default {
         },
     },
     name: 'listContent-component',
+    components: {
+        'carousell-component': Carousell,
+    },
+    watch: {},
 }
 </script>
 
@@ -41,11 +45,11 @@ export default {
     .content {
         @include font(20px);
     }
-    @include pad-width{
-        h2{
+    @include pad-width {
+        h2 {
             font-size: 20px;
         }
-        .content{
+        .content {
             font-size: 16px;
         }
     }

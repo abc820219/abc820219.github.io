@@ -1,0 +1,7 @@
+@import '@/assets/scss/_utils.scss';
+.dark .skill {
+    .content,
+    .center-point {
+        background-color: rgba($primary, 0.5);
+    }
+}

@@ -108,10 +108,9 @@ export default {
     transform: translateX(-50%);
     @include font(16px, 32px);
     > ul li {
-        color: lighten($primary, 15%);
         cursor: pointer;
         @include pad-width {
-           color: lighten($primary, 30%);
+            color: lighten($primary, 30%);
         }
     }
     > ul li.active {
@@ -159,7 +158,10 @@ export default {
         transform: none;
         width: initial;
         font-size: 18px;
-        @include font(18px,36px)
+        z-index: 2;
+        @include font(18px, 36px);
     }
 }
 </style>
+<style src="./dark.scss" lang="scss"></style>
+<style src="./light.scss" lang="scss"></style>

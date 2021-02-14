@@ -1,0 +1,9 @@
+@import '@/assets/scss/_utils.scss';
+.dark .info {
+  .info-content {
+      background-color: rgba($primary, 0.5);
+  }
+  .info-box {
+      background-color: rgba($primary, 0.5);
+  }
+}

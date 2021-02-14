@@ -1,0 +1,9 @@
+@import '@/assets/scss/_utils.scss';
+.light .info {
+  .info-content {
+      background-color: darken($primary, 20%);
+  }
+  .info-box {
+      background-color: darken($primary, 20%);
+  }
+}

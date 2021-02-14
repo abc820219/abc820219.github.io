@@ -22,81 +22,6 @@ export default {
         return {
             currentGroup: 0,
             currentIndex: 0,
-            projectData: [
-                {
-                    id: 0,
-                    group: '工作專案',
-                    isopen: true,
-                    list: [
-                        {
-                            id: 0,
-                            title: '監控網站',
-                            content:
-                                '配合後端排程，監控目前所擁有的網站定時打API檢查查看是否出問題。',
-                            imgs: [],
-                        },
-                        {
-                            id: 1,
-                            title: '接單系統',
-                            content: '處理B2B的操作使用介面。',
-                            imgs: [],
-                        },
-                        {
-                            id: 2,
-                            title: '報表訂閱',
-                            content: '處理B2B的操作使用介面。',
-                            imgs: [],
-                        },
-                        {
-                            id: 3,
-                            title: '預約報到系統',
-                            content: '處理B2C的操作使用介面。',
-                            imgs: [],
-                        },
-                        {
-                            id: 4,
-                            title: 'LandingPage',
-                            content: '一頁式廣告型網站。',
-                            imgs: [],
-                        },
-                    ],
-                },
-                {
-                    id: 1,
-                    group: '網頁作品',
-                    isopen: true,
-                    list: [
-                        {
-                            id: 0,
-                            title: '賽德龐克網站',
-                            content:
-                                '以遊戲2077為設計發想，並且用vue框架開發各種組件，使用到各式排版技巧與簡單特效，用scss來加速開發速度，同時也兼容手機畫面。',
-                            imgs: [],
-                        },
-                        {
-                            id: 1,
-                            title: '工作室網站',
-                            content:
-                                '夢想有一間工作室當作設計發想，使用vue框架開發，並且有撰寫後台。',
-                            imgs: [],
-                        },
-                        {
-                            id: 2,
-                            title: 'landingPage',
-                            content:
-                                '使用大量jquery製作大量特效的一頁式個人介紹網站。',
-                            imgs: [],
-                        },
-                        {
-                            id: 3,
-                            title: '烘焙電商平台',
-                            content:
-                                '團隊作品，撰寫會員系統與第三方API串接，並且擔任整合角色。',
-                            imgs: [],
-                        },
-                    ],
-                },
-            ],
         }
     },
     components: {
@@ -104,8 +29,21 @@ export default {
         'list-content-component': ListContent,
     },
     computed: {
+        projectData: {
+            get() {
+                return this.$store.state.allData.projectData
+            },
+            set(v){
+                this.$store.state.allData.projectData = v
+            }
+        },
         currentListData() {
             return this.projectData[this.currentGroup].list[this.currentIndex]
+        },
+    },
+    watch: {
+        currentIndex() {
+            this.projectData = this.projectData.slice()
         },
     },
 }

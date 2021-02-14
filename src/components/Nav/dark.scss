@@ -1,0 +1,6 @@
+@import '@/assets/scss/_utils.scss';
+.dark .nav-component {
+    > ul li {
+        color: lighten($primary, 15%);
+    }
+}

@@ -51,138 +51,6 @@
 
 <script>
 export default {
-    props: {
-        skillData: {
-            type: Array,
-            default() {
-                return [
-                    {
-                        id: 1,
-                        skillName: 'CSS / SCSS',
-                        skillValue: 7,
-                        skillDes:
-                            '掌握基本排版技巧，理解背後原理，可以適當的對當前畫面做出規劃與優化，並且使用各式奇淫技巧達成畫面需求。',
-                        skillList: [
-                            'block',
-                            'inline-block',
-                            'flex',
-                            'float',
-                            'table',
-                            'position',
-                            '文字屬性',
-                            'BFC知識',
-                            '盒子模型',
-                            '選擇器',
-                            '權重計算',
-                            '瀏覽器渲染過程',
-                            '基本規範',
-                            'SCSS的變數,mixin,function',
-                        ],
-                    },
-                    {
-                        id: 2,
-                        skillName: 'HTML',
-                        skillValue: 7,
-                        skillDes:
-                            '會參考w3c上的內容，並且使用正確的tag來進行版面布局，同時也掌握部分html5的功能。',
-                        skillList: ['html基本標籤', '標籤語意化', '瀏覽器儲存'],
-                    },
-                    {
-                        id: 3,
-                        skillName: 'JS',
-                        skillValue: 6,
-                        skillDes:
-                            '能夠使用基本數學加減乘除餘撰寫程式，對於字串陣列物件迴圈數值有一定的掌握程度並對JS特性知識點有重點訓練，也時常研究新的api。',
-                        skillList: [
-                            '基礎資料型別,判斷式,運算子,迴圈',
-                            'event queue',
-                            'closure',
-                            'promise',
-                            '作用域',
-                            '變量提升',
-                            'this指向',
-                            '參照問題',
-                            '隱式轉型',
-                            '原型鍊',
-                            '部分dom / bom',
-                            '大部分es5 / es6',
-                        ],
-                    },
-                    {
-                        id: 4,
-                        skillName: 'VUE',
-                        skillValue: 6,
-                        skillDes:
-                            '最欣賞與最擅長的框架，對於vue document有一定的掌握程度，推崇從document找解決辦法，會切分component，有多個專案使用vue開發。',
-                        skillList: [
-                            'vue-flow',
-                            'cdn-vue',
-                            'vuex',
-                            'vue-router',
-                            'vue-cli',
-                            'vue-config優化',
-                            'vue-component',
-                            'vue-transition',
-                            'vue-slot',
-                            '元件化開發',
-                            '雙向綁定',
-                        ],
-                    },
-                    {
-                        id: 5,
-                        skillName: 'Animation',
-                        skillValue: 5,
-                        skillDes:
-                            '喜歡特效與動畫，能夠運用目前所掌握的css與js或第三方庫來達成想要的效果。',
-                        skillList: [
-                            '@keyframe',
-                            'js搭配css特效',
-                            'svg控制',
-                            '簡易3d',
-                        ],
-                    },
-                    {
-                        id: 6,
-                        skillName: 'GIT',
-                        skillValue: 7,
-                        skillDes:
-                            '習慣於terminal操作，使用GUI圖像軟體做輔助，能夠理解常使用的指令背後原理，不會造成他人困擾。',
-                        skillList: [
-                            'git pull/fetch',
-                            'git add/commit',
-                            'git reset/checkout',
-                            'git rebase/merge',
-                            'git branch',
-                            'git stash',
-                            'git push',
-                            'git reflog',
-                            'git diff',
-                        ],
-                    },
-                    {
-                        id: 7,
-                        skillName: 'Tools',
-                        skillValue: 6,
-                        skillDes: '工欲善其事，必先利其器，常使用的工具。',
-                        skillList: [
-                            'Vscode',
-                            'Source tree',
-                            'Webpack /Babel',
-                            '瀏覽器開發工具',
-                            'Adobe XD',
-                        ],
-                    },
-                    {
-                        id: 8,
-                        skillName: 'Others',
-                        skillValue: 5,
-                        skillDes: '一些其他技能。',
-                        skillList: ['Potoshop', 'Illustrator', '日文'],
-                    },
-                ]
-            },
-        },
-    },
     name: 'skill',
     data() {
         return {
@@ -203,6 +71,9 @@ export default {
         this.pointData.skillValue = `${total} / 80`
     },
     computed: {
+        skillData() {
+            return this.$store.state.allData.skillData
+        },
         detailData() {
             if (this.currentIndex === 0) return this.pointData
             return this.skillData[this.currentIndex - 1]
@@ -280,8 +151,8 @@ export default {
                         0 0 0px $font-color-blue;
                 }
                 .list-wrap {
-                    max-height: 43vh;
-                    overflow-y:auto;
+                    height: 70%;
+                    overflow-y: auto;
                 }
             }
         }
@@ -310,7 +181,6 @@ export default {
     @include psa(50%, initial, initial, 50%);
     z-index: 2;
     transform: translate(-50%, -50%);
-    background-color: rgba($primary, 0.5);
     width: 150px;
     height: 150px;
     @include pad-width {
@@ -361,7 +231,6 @@ export default {
     .content {
         @include psa(1.5px, 1.5px, 1.5px, 1.5px);
         line-height: 80px;
-        background-color: rgba($primary, 0.5);
         clip-path: polygon(
             30% 0%,
             70% 0%,
@@ -372,7 +241,6 @@ export default {
             0% 70%,
             0% 30%
         );
-        background-color: rgba($primary, 0.5);
         z-index: 1;
         p {
             font-size: 10px;
@@ -421,4 +289,7 @@ export default {
         );
     }
 }
+
 </style>
+<style src="./dark.scss" lang="scss"></style>
+<style src="./light.scss" lang="scss"></style>

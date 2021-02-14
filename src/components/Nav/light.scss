@@ -1,0 +1,12 @@
+@import '@/assets/scss/_utils.scss';
+.light .nav-component {
+  > ul li {
+      color: lighten($primary, 30%);
+  }
+  > ul li:first-child {
+      color: lighten($dark, 15%);
+  }
+  > ul li:last-child {
+      color: lighten($dark, 15%);
+  }
+}

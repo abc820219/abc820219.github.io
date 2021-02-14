@@ -1470,6 +1470,7 @@
                         </div>
                         <div class="w-100 disign-idea">
                             建議使用電腦版來觀看此作品，因為買不起2077只好自己仿造一個介面來過過癮，網站的評分機制均是個人主觀標準，如果您認同我的作品或是對於小弟我有興趣，麻煩請您與我聯絡，進一步的互相認識，希望未來能夠為貴公司盡一份心力，謝謝您的耐心。
+                            <p>email:z27089433@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -1547,7 +1548,7 @@ export default {
         padding: 10px 0;
         max-height: 250px;
         margin-top: 30px;
-        background-color: rgba($primary, 0.5);
+
         clip-path: polygon(
             5% 0%,
             95% 0%,
@@ -1575,7 +1576,7 @@ export default {
         min-height: calc(100vh - 120px);
         margin-top: 30px;
         margin-left: 10px;
-        background-color: rgba($primary, 0.5);
+
         border: 1px solid $primary;
         @include com-width {
             margin-top: 10px;
@@ -1633,9 +1634,16 @@ export default {
         padding-left: 10px;
         padding-top: 10px;
         text-indent: 2em;
+        p {
+            text-indent: 0;
+        }
         @include com-width {
-        @include font(16px, 24px);
-    }
+            @include font(16px, 24px);
+        }
     }
 }
+
+
 </style>
+<style src="./dark.scss" lang="scss"></style>
+<style src="./light.scss" lang="scss"></style>

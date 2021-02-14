@@ -4,6 +4,7 @@
         :style="{ width: propsWidth, height: propsHeight }"
     >
         <slot name="icon"> </slot>
+        <slot name="contact"></slot>
         <div class="content d-flex justify-content-between">
             <slot name="text"> </slot>
         </div>

@@ -2,7 +2,7 @@
     <ul class="list-project-component">
         <li v-for="data in projectData" :key="data.id">
             <button-component
-                propsWidth="350px"
+                propsWidth="330px"
                 @click.native="data.isopen = !data.isopen"
             >
                 <template v-slot:icon>

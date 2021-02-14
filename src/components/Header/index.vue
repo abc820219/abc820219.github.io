@@ -13,6 +13,10 @@
                     姓名
                 </span>
             </h2>
+            <h2 class="mode" @click="modeHandler">
+                <i class="fas fa-moon" v-show="mode == 'dark'"></i>
+                <i class="fas fa-sun" v-show="mode == 'light'"></i>
+            </h2>
         </div>
         <nav-component></nav-component>
         <div class="money"><i class="fas fa-funnel-dollar"></i>000000</div>
@@ -22,10 +26,35 @@
 <script>
 import Nav from '@/components/Nav'
 export default {
+    data() {
+        return {
+            mode: 'light',
+        }
+    },
     components: {
         'nav-component': Nav,
     },
     name: 'header-component',
+    mounted() {
+        this.modeHandler()
+    },
+    methods: {
+        modeHandler() {
+            const BODY = document.querySelector('body')
+            if (this.mode == 'light') {
+                this.mode = 'dark'
+                BODY.classList.remove('light')
+                BODY.classList.add('dark')
+                return
+            }
+            if (this.mode == 'dark') {
+                this.mode = 'light'
+                BODY.classList.remove('dark')
+                BODY.classList.add('light')
+                return
+            }
+        },
+    },
 }
 </script>
 
@@ -43,11 +72,14 @@ export default {
         color: $font-color-blue;
         text-shadow: 0 0 5px $font-color-blue, 0 0 8px $font-color-blue;
         text-indent: 1em;
+        &.mode {
+            text-indent: none;
+        }
         span {
             font-size: 16px;
         }
         @include com-width {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
     .money {
@@ -65,6 +97,9 @@ export default {
         @include com-width {
             display: none;
         }
+    }
+    .mode {
+        cursor: pointer;
     }
 }
 </style>
