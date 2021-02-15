@@ -159,6 +159,12 @@ export default {
         width: initial;
         font-size: 18px;
         z-index: 2;
+        > ul li:first-child {
+            clip-path: none;
+        }
+        > ul li:last-child {
+            clip-path: none;
+        }
         @include font(18px, 36px);
     }
 }

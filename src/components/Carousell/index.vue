@@ -1,6 +1,6 @@
 <template>
     <div class="carousell-component d-flex justify-content-center">
-        <a href="javascript:;" v-if="currenImg && currenImg.length">
+        <a :href="currenLink" v-if="currenImg && currenImg.length">
             <img :src="currenImg" alt="" />
         </a>
     </div>
@@ -29,6 +29,9 @@ export default {
     computed: {
         currenImg() {
             return this.imgs.imgList ? this.imgs.imgList[this.currentIndex] : []
+        },
+        currenLink() {
+            return this.imgs.imgList ? this.imgs.link : 'javascript:;'
         },
     },
     methods: {

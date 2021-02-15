@@ -2,16 +2,16 @@
     <div class="header-component d-flex justify-content-between">
         <div class="d-flex">
             <h2>
-                助理工程師
                 <span>
                     角色
                 </span>
+                助理工程師
             </h2>
             <h2>
-                劉瀚文
                 <span>
                     姓名
                 </span>
+                劉瀚文
             </h2>
             <h2 class="mode" @click="modeHandler">
                 <i class="fas fa-moon" v-show="mode == 'dark'"></i>

@@ -76,11 +76,8 @@ export default new Vuex.Store({
                             content:
                                 '配合後端排程，監控目前所擁有的網站定時打API檢查查看是否出問題。',
                             imgs: {
-                                link: '',
-                                imgList: [
-                                    'https://picsum.photos/id/1/600/400',
-                                    'https://picsum.photos/id/2/600/400',
-                                ],
+                                link: 'javascript:;',
+                                imgList: [],
                             },
                         },
                         {
@@ -88,11 +85,8 @@ export default new Vuex.Store({
                             title: '接單系統',
                             content: '處理B2B的操作使用介面。',
                             imgs: {
-                                link: '',
-                                imgList: [
-                                    'https://picsum.photos/id/3/600/400',
-                                    'https://picsum.photos/id/4/600/400',
-                                ],
+                                link: 'javascript:;',
+                                imgList: [],
                             },
                         },
                         {
@@ -100,11 +94,8 @@ export default new Vuex.Store({
                             title: '報表訂閱',
                             content: '處理B2B的操作使用介面。',
                             imgs: {
-                                link: '',
-                                imgList: [
-                                    'https://picsum.photos/id/5/600/400',
-                                    'https://picsum.photos/id/6/600/400',
-                                ],
+                                link: 'javascript:;',
+                                imgList: [],
                             },
                         },
                         {
@@ -112,11 +103,8 @@ export default new Vuex.Store({
                             title: '預約報到系統',
                             content: '處理B2C的操作使用介面。',
                             imgs: {
-                                link: '',
-                                imgList: [
-                                    'https://picsum.photos/id/7/600/400',
-                                    'https://picsum.photos/id/8/600/400',
-                                ],
+                                link: 'javascript:;',
+                                imgList: [],
                             },
                         },
                         {
@@ -124,11 +112,8 @@ export default new Vuex.Store({
                             title: 'LandingPage',
                             content: '一頁式廣告型網站。',
                             imgs: {
-                                link: '',
-                                imgList: [
-                                    'https://picsum.photos/id/9/600/400',
-                                    'https://picsum.photos/id/10/600/400',
-                                ],
+                                link: 'javascript:;',
+                                imgList: [],
                             },
                         },
                     ],
@@ -144,10 +129,10 @@ export default new Vuex.Store({
                             content:
                                 '以遊戲2077為設計發想，並且用vue框架開發各種組件，使用到各式排版技巧與簡單特效，用scss來加速開發速度，同時也兼容手機畫面。',
                             imgs: {
-                                link: '',
+                                link: 'javascript:;',
                                 imgList: [
-                                    'https://picsum.photos/id/5/600/400',
-                                    'https://picsum.photos/id/3/600/400',
+                                    '/dist/images/project1.jpg',
+                                    '/dist/images/project2.jpg',
                                 ],
                             },
                         },
@@ -157,10 +142,15 @@ export default new Vuex.Store({
                             content:
                                 '夢想有一間工作室當作設計發想，使用vue框架開發，並且有撰寫後台。',
                             imgs: {
-                                link: '',
+                                link: 'https://abc820219.github.io/codeme/#/',
                                 imgList: [
-                                    'https://picsum.photos/id/5/600/400',
-                                    'https://picsum.photos/id/3/600/400',
+                                    '/dist/images/mecode1.jpg',
+                                    '/dist/images/mecode2.jpg',
+                                    '/dist/images/mecode3.jpg',
+                                    '/dist/images/mecode4.jpg',
+                                    '/dist/images/mecode5.jpg',
+                                    '/dist/images/mecode6.jpg',
+                                    '/dist/images/mecode7.jpg',
                                 ],
                             },
                         },
@@ -170,10 +160,12 @@ export default new Vuex.Store({
                             content:
                                 '使用大量jquery製作大量特效的一頁式個人介紹網站。',
                             imgs: {
-                                link: '',
+                                link: 'https://github.com/abc820219/landing',
                                 imgList: [
-                                    'https://picsum.photos/id/5/600/400',
-                                    'https://picsum.photos/id/3/600/400',
+                                    '/dist/images/landing1.jpg',
+                                    '/dist/images/landing2.jpg',
+                                    '/dist/images/landing3.jpg',
+                                    '/dist/images/landing4.jpg',
                                 ],
                             },
                         },
@@ -183,10 +175,13 @@ export default new Vuex.Store({
                             content:
                                 '團隊作品，撰寫會員系統與第三方API串接，並且擔任整合角色。',
                             imgs: {
-                                link: '',
+                                link:
+                                    'https://github.com/abc820219/handmadeTeam',
                                 imgList: [
-                                    'https://picsum.photos/id/5/600/400',
-                                    'https://picsum.photos/id/3/600/400',
+                                    '/dist/images/handmade.jpg',
+                                    '/dist/images/handmade1.jpg',
+                                    '/dist/images/handmade2.jpg',
+                                    '/dist/images/handmade3.jpg',
                                 ],
                             },
                         },
