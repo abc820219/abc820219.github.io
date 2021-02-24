@@ -19,7 +19,7 @@
             </h2>
         </div>
         <nav-component></nav-component>
-        <div class="money"><i class="fas fa-funnel-dollar"></i>000000</div>
+        <div class="money"><i class="fas fa-funnel-dollar"></i>{{ money }}</div>
     </div>
 </template>
 
@@ -29,6 +29,7 @@ export default {
     data() {
         return {
             mode: 'light',
+            money: '0',
         }
     },
     components: {
@@ -37,6 +38,11 @@ export default {
     name: 'header-component',
     mounted() {
         this.modeHandler()
+        for (let i = 0; i <= 999; i++) {
+            setTimeout(() => {
+                this.money = parseInt(this.money) + 1
+            }, i)
+        }
     },
     methods: {
         modeHandler() {

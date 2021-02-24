@@ -4,7 +4,7 @@
         <transition name="fade" mode="out-in">
             <router-view />
         </transition>
-        <contact-component></contact-component>
+        <contact-component v-if="$route.name === 'Home'"></contact-component>
     </div>
 </template>
 <script>
@@ -14,7 +14,7 @@ export default {
     components: {
         'header-component': Header,
         'contact-component': Contact
-    },
+    }
 }
 </script>
 
