@@ -131,8 +131,8 @@ export default new Vuex.Store({
                             imgs: {
                                 link: 'javascript:;',
                                 imgList: [
-                                    '/dist/images/project1.jpg',
-                                    '/dist/images/project2.jpg',
+                                    '/images/project1.jpg',
+                                    '/images/project2.jpg',
                                 ],
                             },
                         },
@@ -144,13 +144,13 @@ export default new Vuex.Store({
                             imgs: {
                                 link: 'https://abc820219.github.io/codeme/#/',
                                 imgList: [
-                                    '/dist/images/mecode1.jpg',
-                                    '/dist/images/mecode2.jpg',
-                                    '/dist/images/mecode3.jpg',
-                                    '/dist/images/mecode4.jpg',
-                                    '/dist/images/mecode5.jpg',
-                                    '/dist/images/mecode6.jpg',
-                                    '/dist/images/mecode7.jpg',
+                                    '/images/mecode1.jpg',
+                                    '/images/mecode2.jpg',
+                                    '/images/mecode3.jpg',
+                                    '/images/mecode4.jpg',
+                                    '/images/mecode5.jpg',
+                                    '/images/mecode6.jpg',
+                                    '/images/mecode7.jpg',
                                 ],
                             },
                         },
@@ -162,10 +162,10 @@ export default new Vuex.Store({
                             imgs: {
                                 link: 'https://github.com/abc820219/landing',
                                 imgList: [
-                                    '/dist/images/landing1.jpg',
-                                    '/dist/images/landing2.jpg',
-                                    '/dist/images/landing3.jpg',
-                                    '/dist/images/landing4.jpg',
+                                    '/images/landing1.jpg',
+                                    '/images/landing2.jpg',
+                                    '/images/landing3.jpg',
+                                    '/images/landing4.jpg',
                                 ],
                             },
                         },
@@ -178,10 +178,10 @@ export default new Vuex.Store({
                                 link:
                                     'https://github.com/abc820219/handmadeTeam',
                                 imgList: [
-                                    '/dist/images/handmade.jpg',
-                                    '/dist/images/handmade1.jpg',
-                                    '/dist/images/handmade2.jpg',
-                                    '/dist/images/handmade3.jpg',
+                                    '/images/handmade.jpg',
+                                    '/images/handmade1.jpg',
+                                    '/images/handmade2.jpg',
+                                    '/images/handmade3.jpg',
                                 ],
                             },
                         },

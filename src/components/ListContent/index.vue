@@ -4,16 +4,10 @@
         <p class="content">
             {{ currentListData.content }}
         </p>
-        <div class="imgBox">
-            <carousell-component
-                :imgs="currentListData.imgs"
-            ></carousell-component>
-        </div>
     </div>
 </template>
 
 <script>
-import Carousell from '@/components/Carousell'
 export default {
     props: {
         currentListData: {
@@ -24,10 +18,6 @@ export default {
         },
     },
     name: 'listContent-component',
-    components: {
-        'carousell-component': Carousell,
-    },
-    watch: {},
 }
 </script>
 
