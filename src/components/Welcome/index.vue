@@ -10,7 +10,7 @@ export default {
             text: [
                 'welcome to my project ',
                 '歡迎來到我的專案 ',
-                '夢想成為專業前端工程師 ',
+                '目前是前端工程師 ',
                 'ようこそ 私のプロジェクト ',
             ],
             timer: null,

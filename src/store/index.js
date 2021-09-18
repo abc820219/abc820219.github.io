@@ -11,7 +11,7 @@ export default new Vuex.Store({
                     id: 0,
                     title: '初心者工程師',
                     content:
-                        '在科技廠擔任助理工程師，負責系統案子前端部分為主，並且把一些手動問題進行優化，加速大家整體作業，目前正在進行監控網站與接單系統的開發，有時候會去支援一些舊有案子的畫面優化，因為喜歡與人交流，身兼部門福委，常常會跨部門開會與討論。',
+                        '在科技廠擔任前端工程師，主要負責內部系統與AORUS官方網站，主要使用Vue框架進行重構與開發',
                     status: '基礎',
                     isFinished: false,
                 },
@@ -72,9 +72,9 @@ export default new Vuex.Store({
                     list: [
                         {
                             id: 0,
-                            title: '監控網站',
+                            title: 'PLM專案管理系統',
                             content:
-                                '配合後端排程，監控目前所擁有的網站定時打API檢查查看是否出問題。',
+                                '專案進度的申請與排程視覺化。',
                             imgs: {
                                 link: 'javascript:;',
                                 imgList: [],
@@ -82,8 +82,8 @@ export default new Vuex.Store({
                         },
                         {
                             id: 1,
-                            title: '接單系統',
-                            content: '處理B2B的操作使用介面。',
+                            title: '中國接單系統',
+                            content: '中國地區的接單系統支援多國語系。',
                             imgs: {
                                 link: 'javascript:;',
                                 imgList: [],
@@ -91,6 +91,33 @@ export default new Vuex.Store({
                         },
                         {
                             id: 2,
+                            title: '內部微服務平台',
+                            content: '集合各種微服務開發，公告系統，台灣接單，簽呈等等。',
+                            imgs: {
+                                link: 'javascript:;',
+                                imgList: [],
+                            },
+                        },
+                        {
+                            id: 3,
+                            title: '舊有系統重構',
+                            content: '處理B2B的操作使用介面。',
+                            imgs: {
+                                link: 'javascript:;',
+                                imgList: [],
+                            },
+                        },
+                        {
+                            id: 4,
+                            title: 'AORUS國際官方網站',
+                            content: '協助現有官網開發與優化',
+                            imgs: {
+                                link: 'https://www.aorus.com/',
+                                imgList: [],
+                            },
+                        },
+                        {
+                            id: 5,
                             title: '報表訂閱',
                             content: '處理B2B的操作使用介面。',
                             imgs: {
@@ -99,7 +126,7 @@ export default new Vuex.Store({
                             },
                         },
                         {
-                            id: 3,
+                            id: 6,
                             title: '預約報到系統',
                             content: '處理B2C的操作使用介面。',
                             imgs: {
@@ -108,7 +135,7 @@ export default new Vuex.Store({
                             },
                         },
                         {
-                            id: 4,
+                            id: 7,
                             title: 'LandingPage',
                             content: '一頁式廣告型網站。',
                             imgs: {
@@ -223,7 +250,7 @@ export default new Vuex.Store({
                 {
                     id: 3,
                     skillName: 'JS',
-                    skillValue: 6,
+                    skillValue: 7,
                     skillDes:
                         '能夠使用基本數學加減乘除餘撰寫程式，對於字串陣列物件迴圈數值有一定的掌握程度並對JS特性知識點有重點訓練，也時常研究新的api。',
                     skillList: [
@@ -244,7 +271,7 @@ export default new Vuex.Store({
                 {
                     id: 4,
                     skillName: 'VUE',
-                    skillValue: 6,
+                    skillValue: 7,
                     skillDes:
                         '最欣賞與最擅長的框架，對於vue document有一定的掌握程度，推崇從document找解決辦法，會切分component，有多個專案使用vue開發。',
                     skillList: [
@@ -283,7 +310,7 @@ export default new Vuex.Store({
                     skillList: [
                         'git pull/fetch',
                         'git add/commit',
-                        'git reset/checkout',
+                        'git reset/checkout/revert',
                         'git rebase/merge',
                         'git branch',
                         'git stash',
