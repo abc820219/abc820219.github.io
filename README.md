@@ -1,29 +1,6 @@
-# portfolio
+# 個人介紹網站
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+您好我是劉瀚文。<br>
+目前任職於技嘉科技，前端工程師一職。 <br>
+email:z27089433@gmail.com</br>
+tel:0976562513
