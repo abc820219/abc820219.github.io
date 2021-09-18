@@ -11,7 +11,7 @@ export default new Vuex.Store({
                     id: 0,
                     title: '初心者工程師',
                     content:
-                        '在科技廠擔任前端工程師，主要負責內部系統與AORUS官方網站，主要使用Vue框架進行重構與開發',
+                        '在科技廠擔任前端工程師，主要負責內部系統與AORUS官方網站，並且使用Vue框架進行重構與開發。',
                     status: '基礎',
                     isFinished: false,
                 },
@@ -110,7 +110,7 @@ export default new Vuex.Store({
                         {
                             id: 4,
                             title: 'AORUS國際官方網站',
-                            content: '協助現有官網開發與優化',
+                            content: '協助現有國際官網開發與優化。',
                             imgs: {
                                 link: 'https://www.aorus.com/',
                                 imgList: [],

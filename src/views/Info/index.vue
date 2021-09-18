@@ -1297,11 +1297,10 @@
                 <h2>基本資訊</h2>
                 <ul>
                     <li>最高學歷 : 醒吾科技大學</li>
-                    <li>工作總年資 : 2年 [ 網頁,平面,助理工程師 ]</li>
+                    <li>工作總年資 : 2年 [ 網頁,平面,前端工程師 ]</li>
                     <li>工作狀態 : 在職中</li>
-                    <li>年齡 : 27</li>
+                    <li>年齡 : 28</li>
                     <li>興趣 : 桌遊 [ 對戰類, 博弈類 ] , 日文 , 音樂</li>
-                    <li>未來志向 : 前端工程師</li>
                 </ul>
             </div>
             <div class="info-content d-flex flex-column align-items-center">
