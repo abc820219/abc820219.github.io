@@ -40,6 +40,7 @@ export default {
         @include font(20px);
     }
     a{
+        @include light-primary;
         display: block;
         margin: 10px 0;
     }

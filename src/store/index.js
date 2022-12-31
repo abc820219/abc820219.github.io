@@ -21,7 +21,7 @@ export default new Vuex.Store({
                     content:
                         '在科技廠擔任前端工程師，主要負責內部系統與AORUS官方網站，並且使用Vue框架進行重構與開發。',
                     status: '基礎',
-                    isFinished: false,
+                    isFinished: true,
                 },
                 {
                     id: 2,
