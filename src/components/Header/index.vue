@@ -38,7 +38,7 @@ export default {
     name: 'header-component',
     mounted() {
         this.modeHandler()
-        for (let i = 0; i <= 999; i++) {
+        for (let i = 0; i <= 665; i++) {
             setTimeout(() => {
                 this.money = parseInt(this.money) + 1
             }, i)

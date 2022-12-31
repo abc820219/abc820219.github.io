@@ -4,10 +4,14 @@
         <p class="content">
             {{ currentListData.content }}
         </p>
+        <a :href="link.href" target="blank" v-for="(link,index)  in currentListData.links" :key="index">
+            {{ link.title }}  
+        </a>
     </div>
 </template>
 
 <script>
+
 export default {
     props: {
         currentListData: {
@@ -34,6 +38,10 @@ export default {
     }
     .content {
         @include font(20px);
+    }
+    a{
+        display: block;
+        margin: 10px 0;
     }
     @include pad-width {
         h2 {

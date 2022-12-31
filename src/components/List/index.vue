@@ -51,7 +51,6 @@ export default {
     },
     methods: {
         changeContentHandler(id) {
-            console.log(id)
             this.$emit('update:currentIndex', id)
         },
     },
