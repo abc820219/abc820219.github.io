@@ -132,7 +132,7 @@ export default new Vuex.Store({
                             id:2,
                             title: 'AORUS國際官方網站',
                             content: '協助現有國際官網開發與優化。',
-                            links:[{name:'aorus 官網',href:'https://www.aorus.com/'}]
+                            links:[{title:'aorus 官網',href:'https://www.aorus.com/'}]
                         },
                         {
                             id:3,
@@ -299,7 +299,7 @@ export default new Vuex.Store({
                     skillName: 'BackEnd',
                     skillValue: 5,
                     skillDes: '後端技能。',
-                    skillList: ['Node.js', 'MySQL', 'Redis','API 整合開發'],
+                    skillList: ['Node.js', 'MySQL', 'Redis','API 整合開發','AWS'],
                 },
             ],
         },
